@@ -2,6 +2,7 @@ package webserver
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -13,6 +14,6 @@ func Run() {
 	http.HandleFunc("/", Homepage)
 	http.HandleFunc("/upload", HandleUpload)
 	addr := GetAddress()
-	fmt.Printf("Listening on %s\n", addr)
+	log.Printf("Listening on %s\n", addr)
 	http.ListenAndServe(addr, nil)
 }
