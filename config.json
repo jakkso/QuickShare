@@ -1,0 +1,9 @@
+{
+  "allowedMimeTypes": [
+    "image/png",
+    "image/jpeg",
+    "image/gif",
+    "video/webm",
+    "video/x-matroska"
+  ]
+}
