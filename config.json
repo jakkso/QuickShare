@@ -4,6 +4,8 @@
     "image/jpeg",
     "image/gif",
     "video/webm",
-    "video/x-matroska"
+    "video/x-matroska",
+    "application/pdf",
+    "application/x-mobipocket-ebook"
   ]
 }
