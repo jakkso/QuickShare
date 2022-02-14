@@ -10,8 +10,6 @@ import (
 	"path"
 )
 
-
-
 func HandleUpload(w http.ResponseWriter, req *http.Request) {
 	if req.Method != "POST" {
 		fmt.Fprintf(w, "Invalid method %s", req.Method)
@@ -45,8 +43,8 @@ func FileUpload(req *http.Request) error {
 		return errors.New("data seek error")
 	}
 	// Stick content type into a map at program start
-	if config.MimeTypes[contentType] {
-		filename, err := files.GenerateFilename(config.UploadDir, path.Ext(header.Filename))
+	if config.Config.MimeTypes[contentType] {
+		filename, err := files.GenerateFilename(config.Config.UploadDir, path.Ext(header.Filename))
 		if err != nil {
 			return err
 		}
