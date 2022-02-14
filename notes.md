@@ -27,12 +27,19 @@ server.
 
 ### Work Needed
 
+* DB
+  * Schema
+  * Flavor
+
+* Dockerizing it
+ * This should probably be done prior to anything else.
+
 * Config
   * Read in from file (json, yaml, toml, etc)
   * Store in running program
   * Values
     * Port
-    * Domain (Include subdomain, if applicable)
+    * Domain (Include subdomain, if applicable) Maybe leave to rev proxy to deal with this.
     * Store/DB connection values
       * Domain
       * Port
