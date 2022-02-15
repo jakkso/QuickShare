@@ -13,7 +13,7 @@ func Homepage(w http.ResponseWriter, req *http.Request) {
 func Run() {
 	http.HandleFunc("/", Homepage)
 	http.HandleFunc("/upload", HandleUpload)
-	addr := GetAddress()
+	addr := ":5000"
 	log.Printf("Listening on %s\n", addr)
 	http.ListenAndServe(addr, nil)
 }
