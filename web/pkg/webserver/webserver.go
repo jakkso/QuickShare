@@ -1,14 +1,9 @@
 package webserver
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 )
-
-func Homepage(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "Homepage\n")
-}
 
 func Run() {
 	http.HandleFunc("/", Homepage)

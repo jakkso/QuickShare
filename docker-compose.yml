@@ -7,3 +7,20 @@ services:
     volumes:
       - /Users/xander/downloads/junk:/app/share
       - /Users/xander/downloads/junk:/app/upload
+    environment:
+      MONGO_URI: "mongodb://db:27017"
+    restart: unless-stopped
+    depends_on:
+      - db
+  db:
+    restart: unless-stopped
+    image: mongo:5.0.6-focal
+    volumes:
+      - quick-share-data:/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+volumes:
+  quick-share-data:
