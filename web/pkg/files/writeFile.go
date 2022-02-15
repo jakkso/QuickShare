@@ -9,7 +9,7 @@ import (
 )
 
 func WriteFile(file multipart.File, filename string) error {
-	w, err := os.Create(filename);
+	w, err := os.Create(filename)
 	defer w.Close()
 	if err != nil {
 		log.Println(fmt.Sprintf("Err %e", err))
